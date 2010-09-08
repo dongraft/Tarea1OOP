@@ -12,7 +12,8 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    polygon.cpp
+    polygon.cpp \
+    graphicsview.cpp
 
 HEADERS  += mainwindow.h \
     vertex.h \

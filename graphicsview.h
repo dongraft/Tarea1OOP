@@ -3,13 +3,13 @@
 
 #include <QGraphicsView>
 
-class graphicsview : public QGraphicsView
+class GraphicsView : public QGraphicsView
 {
 
     Q_OBJECT
 
 public:
-    graphicsview(QWidget *parent = 0);
+    GraphicsView(QWidget *parent = 0);
     void resizeEvent(QResizeEvent *event);
 
 signals:
