@@ -8,9 +8,13 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     scene = new GraphicsScene(this);
     ui->graphicsView->setScene(scene);
+
+    connect(ui->graphicsView, SIGNAL(resized(int,int)),
+            scene, SLOT(setNewSize(int, int)));
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+    delete scene;
 }
