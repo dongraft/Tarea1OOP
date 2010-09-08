@@ -1,4 +1,5 @@
 #include "graphicsview.h"
+#include "graphicsscene.h"
 #include <QDebug>
 #include <QResizeEvent>
 #include <QFontMetrics>
