@@ -11,25 +11,23 @@
 #include "vertex.h"
 #include "numeric.h"
 
-class polygon {
+class Polygon {
 public:
     //constructor vacio
-    polygon();
+    Polygon();
     //constructor con numero de puntos a incluir, como un stack
-    polygon(int);
+    Polygon(int);
     //destructor
-    ~polygon();
+    ~Polygon();
 
-    void addVertex(vertex v);
+    void addVertex(Vertex v);
     int getVerticesNumber();
-    numeric getArea();
-    numeric getPerimeter();
+    double getArea();
+    double getPerimeter();
 
 private:
 
-    vertex* vertices;
-    //int perimeter;
-    //int area;
+    Vertex* vertices;
 
 
 };

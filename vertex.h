@@ -11,16 +11,16 @@
 #include <assert.h>
 #include "numeric.h"
 
-class vertex {
+class Vertex {
 private:
-    numeric<class T>& x, y;
+    double x, y;
 
 public:
-    vertex(numeric<class T> x, numeric<class T> y);
-    numeric<class T> getX();
-    numeric<class T> getY();
-    void setX(numeric x);
-    void setY(numeric y);
+    Vertex vertex(double x, double y);
+    double getX();
+    double getY();
+    void setX(double x);
+    void setY(double y);
 };
 
 #endif	/* VERTEX_H */

@@ -13,19 +13,19 @@
 template <class T>
 class numeric{
 
-private:
-    T number;
+//private:
+//    T number;
 
-public:
-    numeric(int);
-    numeric(float);
-    numeric(double);
-    numeric(long);
-};
+//public:
+//    numeric(int);
+//    numeric(float);
+//    numeric(double);
+//    numeric(long);
+//};
 
-template<class T> numeric<T>::numeric(int n){
-    assert(n != NULL);
-    number = n;
+//template<class T> numeric<T>::numeric(int n){
+//    assert(n != NULL);
+//    number = n;
 }
 
 #endif	/* NUMERIC_H */
