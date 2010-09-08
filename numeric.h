@@ -11,7 +11,7 @@
 #include <assert.h>
 
 template <class T>
-class numeric{
+class Numeric{
 
 //private:
 //    T number;
