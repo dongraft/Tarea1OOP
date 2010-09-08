@@ -12,11 +12,12 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    polygon.c
+    polygon.cpp
 
 HEADERS  += mainwindow.h \
     vertex.h \
     polygon.h \
-    numeric.h
+    numeric.h \
+    graphicsview.h
 
 FORMS    += mainwindow.ui

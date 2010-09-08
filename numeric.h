@@ -1,4 +1,4 @@
-/* 
+/*
  * File:   numeric.h
  * Author: jcarrera
  *
@@ -7,6 +7,8 @@
 
 #ifndef NUMERIC_H
 #define	NUMERIC_H
+
+#include <assert.h>
 
 template <class T>
 class numeric{
@@ -22,6 +24,7 @@ public:
 };
 
 template<class T> numeric<T>::numeric(int n){
+    assert(n != NULL);
     number = n;
 }
 

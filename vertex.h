@@ -13,14 +13,14 @@
 
 class vertex {
 private:
-    numeric x, y;
+    numeric<class T>& x, y;
 
 public:
-    vertex(numeric x, numeric y);
-    numeric getX();
-    numeric getY();
+    vertex(numeric<class T> x, numeric<class T> y);
+    numeric<class T> getX();
+    numeric<class T> getY();
     void setX(numeric x);
     void setY(numeric y);
 };
 
-#endif	/* VERnumericEX_H */
+#endif	/* VERTEX_H */
