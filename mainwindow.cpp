@@ -6,6 +6,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    scene = new GraphicsScene(this);
 }
 
 MainWindow::~MainWindow()
