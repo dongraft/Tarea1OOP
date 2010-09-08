@@ -13,12 +13,14 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     polygon.cpp \
-    graphicsview.cpp
+    graphicsview.cpp \
+    graphicsscene.cpp
 
 HEADERS  += mainwindow.h \
     vertex.h \
     polygon.h \
     numeric.h \
-    graphicsview.h
+    graphicsview.h \
+    graphicsscene.h
 
 FORMS    += mainwindow.ui
