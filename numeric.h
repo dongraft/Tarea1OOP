@@ -1,32 +1,29 @@
-/*
- * File:   numeric.h
- * Author: jcarrera
- *
- * Created on September 7, 2010, 4:23 PM
- */
-
 #ifndef NUMERIC_H
 #define	NUMERIC_H
 
 #include <assert.h>
+#include <QString>
 
-template <class T>
 class Numeric{
 
-//private:
-//    T number;
+private:
+    long num;
+    long den;
 
-//public:
-//    numeric(int);
-//    numeric(float);
-//    numeric(double);
-//    numeric(long);
-//};
-
-//template<class T> numeric<T>::numeric(int n){
-//    assert(n != NULL);
-//    number = n;
-}
+public:
+    Numeric(int);
+    //Numeric(float);
+    Numeric(double);
+    Numeric(long);
+    Numeric(long,long);
+    Numeric operator+(const Numeric &);
+    Numeric operator-(const Numeric &);
+    Numeric operator/(const Numeric &);
+    Numeric operator*(const Numeric &);
+    QString toString();
+    long getNum();
+    long getDen();
+};
 
 #endif	/* NUMERIC_H */
 

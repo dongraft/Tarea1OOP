@@ -9,6 +9,10 @@ MainWindow::MainWindow(QWidget *parent) :
     scene = new GraphicsScene(this);
     ui->graphicsView->setScene(scene);
 
+//    scene->addEllipse(100,100,50,50);
+//    scene->addEllipse(0,100,100,20);
+
+
     connect(ui->graphicsView, SIGNAL(resized(int,int)),
             scene, SLOT(setNewSize(int, int)));
 }
