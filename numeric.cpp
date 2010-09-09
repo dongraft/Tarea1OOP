@@ -66,3 +66,7 @@ long Numeric::getDen(){
 long Numeric::getNum(){
     return num;
 }
+
+int Numeric::getPx(){
+    return (int)(num/den);
+}

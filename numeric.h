@@ -23,6 +23,7 @@ public:
     QString toString();
     long getNum();
     long getDen();
+    int getPx();
 };
 
 #endif	/* NUMERIC_H */
