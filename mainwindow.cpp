@@ -9,11 +9,12 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     polygon = new Polygon;
     ui->graphicsView->setScene(scene);
     //blablabla aca se intera con la entrada
-    polygon->addVertex(Vertex(Numeric(100),Numeric(50)));
-    polygon->addVertex(Vertex(Numeric(300),Numeric(120)));
-    polygon->addVertex(Vertex(Numeric(320),Numeric(250)));
-    polygon->addVertex(Vertex(Numeric(150),Numeric(330)));
-    polygon->addVertex(Vertex(Numeric(50),Numeric(200)));
+    Vertex * vertex = new Vertex(Numeric(100), Numeric(50));
+    polygon->addVertex(vertex);
+//    polygon->addVertex(Vertex(Numeric(300),Numeric(120)));
+//    polygon->addVertex(Vertex(Numeric(320),Numeric(250)));
+//    polygon->addVertex(Vertex(Numeric(150),Numeric(330)));
+//    polygon->addVertex(Vertex(Numeric(50),Numeric(200)));
 
     unsigned int count = polygon->getVerticesNumber();
     vector<Vertex> vertices = polygon->getVertices();

@@ -16,12 +16,10 @@ using namespace std;
 
 class Polygon {
 public:
-    //constructor vacio
     Polygon();
-    //destructor
     ~Polygon();
 
-    void addVertex(Vertex v);
+    void addVertex(Vertex *v);
     int getVerticesNumber();
     Numeric getArea();
     Numeric getPerimeter();
@@ -31,7 +29,7 @@ public:
 private:
 //    vector<Vertex> out;
     //Vertex *out;
-    vector<Vertex> vertices;
+    vector<Vertex> *vertices;
     //Vertex* vertices;
 
 };

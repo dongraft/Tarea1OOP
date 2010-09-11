@@ -8,15 +8,16 @@
 //Vertex* vertices;
 Polygon::Polygon(){
     assert(true);
+    vertices = new vector<Vertex>();
 }
 
 Polygon::~Polygon(){
 
 }
 
-void Polygon::addVertex(Vertex v){
+void Polygon::addVertex(Vertex *v){
     //no necesita assert, Vertex viene bien armado de fabrica
-    this -> vertices.push_back(v);
+    vertices.push_back(v);
     qDebug() << "Agregue un Vertice" << v.getX().toString();
 }
 
