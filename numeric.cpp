@@ -1,4 +1,12 @@
 #include "numeric.h"
+#include <assert.h>
+#include <QDebug>
+#include <math.h>
+
+Numeric::Numeric(){
+    assert(true);
+    Numeric(0,0);
+}
 
 Numeric::Numeric(int n){
     Numeric(n,1);
@@ -17,6 +25,9 @@ Numeric::Numeric(long n){
 }
 
 Numeric::Numeric(long num, long den){
+    //den mayor a 0, obvio
+    qDebug() << "num/den:" << num <<"/" <<den;
+    assert(den!=0);
     long numTmp = num;
     long denTmp = den;
     //eclides para maximo comun divisor, mcd o gcd
@@ -65,6 +76,15 @@ long Numeric::getDen(){
 
 long Numeric::getNum(){
     return num;
+}
+
+void Numeric::setNum(long num){
+    this->num = num;
+}
+
+void Numeric::setDen(long den){
+    assert(den!=0);
+    this->den = den;
 }
 
 int Numeric::getPx(){

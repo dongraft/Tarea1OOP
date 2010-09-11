@@ -16,13 +16,15 @@ SOURCES += main.cpp\
     graphicsview.cpp \
     graphicsscene.cpp \
     numeric.cpp \
-    vertex.cpp
+    vertex.cpp \
+    utils.cpp
 
 HEADERS  += mainwindow.h \
     vertex.h \
     polygon.h \
     numeric.h \
     graphicsview.h \
-    graphicsscene.h
+    graphicsscene.h \
+    utils.h
 
 FORMS    += mainwindow.ui

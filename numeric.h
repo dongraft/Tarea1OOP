@@ -11,7 +11,7 @@ private:
     long den;
 
 public:
-    Numeric(){}
+    Numeric();
     Numeric(int);
     //Numeric(float);
     Numeric(double);
@@ -21,7 +21,10 @@ public:
     Numeric operator-(const Numeric &);
     Numeric operator/(const Numeric &);
     Numeric operator*(const Numeric &);
+    Numeric sqrt(Numeric);
     QString toString();
+    void setNum(long);
+    void setDen(long);
     long getNum();
     long getDen();
     int getPx();

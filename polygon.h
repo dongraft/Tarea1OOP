@@ -23,13 +23,13 @@ public:
 
     void addVertex(Vertex v);
     int getVerticesNumber();
-    double getArea();
-    double getPerimeter();
+    Numeric getArea();
+    Numeric getPerimeter();
     vector<Vertex> getVertices();
-    void setOut(vector<Vertex>);
+//    void setOut(vector<Vertex>);
 
 private:
-    vector<Vertex> out;
+//    vector<Vertex> out;
     //Vertex *out;
     vector<Vertex> vertices;
     //Vertex* vertices;

@@ -14,15 +14,15 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     polygon->addVertex(Vertex(Numeric(320),Numeric(250)));
     polygon->addVertex(Vertex(Numeric(150),Numeric(330)));
     polygon->addVertex(Vertex(Numeric(50),Numeric(200)));
-    int count = polygon->getVerticesNumber();
+
+    unsigned int count = polygon->getVerticesNumber();
     vector<Vertex> vertices = polygon->getVertices();
-    Vertex a = vertices.at(2);
-    qDebug() << a.getX().getPx();
-    for(int i = 0; i<count-1; i++){
-        qDebug() << "Esto es i" << i;
+
+    for(unsigned int i = 0; i<count-1; i++){
         Vertex a = vertices.at(i);
-        Vertex b = vertices.at(i+1);
-        qDebug() << a.getX().getPx();
+        qDebug() << "Esto es i" << i<< "Vertice en X: " << a.getX().getPx();
+
+        //Vertex b = vertices.at(i+1);
        // scene->addLine(a.getX().getPx(),a.getY().getPx(),b.getX().getPx(),b.getY().getPx());
     }
 
