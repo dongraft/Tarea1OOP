@@ -11,6 +11,7 @@ private:
     long den;
 
 public:
+    Numeric(){}
     Numeric(int);
     //Numeric(float);
     Numeric(double);

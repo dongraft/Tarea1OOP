@@ -1,24 +1,45 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <iostream>
+#include <QDebug>
 
-MainWindow::MainWindow(QWidget *parent) :
-    QMainWindow(parent),
-    ui(new Ui::MainWindow)
-{
+MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow){
     ui->setupUi(this);
     scene = new GraphicsScene(this);
+    polygon = new Polygon;
     ui->graphicsView->setScene(scene);
+    //blablabla aca se intera con la entrada
+    polygon->addVertex(Vertex(Numeric(100),Numeric(50)));
+    polygon->addVertex(Vertex(Numeric(300),Numeric(120)));
+    polygon->addVertex(Vertex(Numeric(320),Numeric(250)));
+    polygon->addVertex(Vertex(Numeric(150),Numeric(330)));
+    polygon->addVertex(Vertex(Numeric(50),Numeric(200)));
+    int count = polygon->getVerticesNumber();
+    vector<Vertex> vertices = polygon->getVertices();
+    Vertex a = vertices.at(2);
+    qDebug() << a.getX().getPx();
+    for(int i = 0; i<count-1; i++){
+        qDebug() << "Esto es i" << i;
+        Vertex a = vertices.at(i);
+        Vertex b = vertices.at(i+1);
+        qDebug() << a.getX().getPx();
+       // scene->addLine(a.getX().getPx(),a.getY().getPx(),b.getX().getPx(),b.getY().getPx());
+    }
 
-//    scene->addEllipse(100,100,50,50);
+
+ //   scene->addEllipse(100,100,50,50);
 //    scene->addEllipse(0,100,100,20);
 
-
-    connect(ui->graphicsView, SIGNAL(resized(int,int)),
-            scene, SLOT(setNewSize(int, int)));
+    connect(ui->graphicsView, SIGNAL(resized(int,int)), scene, SLOT(setNewSize(int, int)));
 }
 
-MainWindow::~MainWindow()
-{
+MainWindow::~MainWindow(){
     delete ui;
     delete scene;
+    //delete polygon;
 }
+
+//void MainWindow::setPolygon(Polygon p){
+//    this->polygon = p;
+//}
+

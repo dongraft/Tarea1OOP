@@ -9,6 +9,8 @@ class GraphicsScene : public QGraphicsScene
 public:
     GraphicsScene(QObject *parent = 0);
 
+  //  void mousePressEvent(QGraphicsSceneMouseEvent *event);
+
 public slots:
     void setNewSize(int width, int height);
 };

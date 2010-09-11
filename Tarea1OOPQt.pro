@@ -15,7 +15,8 @@ SOURCES += main.cpp\
     polygon.cpp \
     graphicsview.cpp \
     graphicsscene.cpp \
-    numeric.cpp
+    numeric.cpp \
+    vertex.cpp
 
 HEADERS  += mainwindow.h \
     vertex.h \

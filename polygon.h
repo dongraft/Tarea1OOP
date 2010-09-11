@@ -10,13 +10,14 @@
 
 #include "vertex.h"
 #include "numeric.h"
+#include <vector>
+
+using namespace std;
 
 class Polygon {
 public:
     //constructor vacio
     Polygon();
-    //constructor con numero de puntos a incluir, como un stack
-    Polygon(int);
     //destructor
     ~Polygon();
 
@@ -24,11 +25,14 @@ public:
     int getVerticesNumber();
     double getArea();
     double getPerimeter();
+    vector<Vertex> getVertices();
+    void setOut(vector<Vertex>);
 
 private:
-
-    Vertex* vertices;
-
+    vector<Vertex> out;
+    //Vertex *out;
+    vector<Vertex> vertices;
+    //Vertex* vertices;
 
 };
 
