@@ -40,7 +40,7 @@ Numeric Polygon::getArea(){
     v_i = vertices->at(vertices->size()-1);
     v_i1 = vertices->at(0);
     area = area + v_i->getX()*v_i1->getY() - v_i->getY()*v_i1->getX();
-    return area;
+    return UTILS_H::fabs(area);
 }
 
 Numeric Polygon::getPerimeter(){

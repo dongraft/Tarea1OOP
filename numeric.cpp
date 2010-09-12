@@ -26,7 +26,6 @@ Numeric::Numeric(long n){
 
 Numeric::Numeric(long num, long den){
     assert(den!=0);
-    qDebug() << "num/den:" << num <<"/" <<den;
     long gcd = UTILS_H::gcd(num,den);
     this->num = num/gcd;
     this->den = den/gcd;

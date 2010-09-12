@@ -17,3 +17,9 @@ long gcd(long _a, long _b){
     }
     return a==0 ? 1: a;
 }
+
+Numeric fabs(Numeric n){
+    long _num = fabs(n.getNum());
+    long _den = fabs(n.getDen());
+    return Numeric(_num,_den);
+}
