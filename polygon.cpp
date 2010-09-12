@@ -18,7 +18,7 @@ Polygon::~Polygon(){
 void Polygon::addVertex(Vertex *v){
     //no necesita assert, Vertex viene bien armado de fabrica
     vertices->push_back(v);
-    qDebug() << "Agregue un Vertice" << v->getX().toString();
+    qDebug() << "Agregue un Vertice" << v->getX().toString() << v->getY().toString();
 }
 
 int Polygon::getVerticesNumber(){

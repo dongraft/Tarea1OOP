@@ -2,21 +2,48 @@
 #include "ui_mainwindow.h"
 #include <iostream>
 #include <QDebug>
+using namespace std;
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow){
     ui->setupUi(this);
     scene = new GraphicsScene(this);
-    polygon = new Polygon;
+    polygon = new Polygon();
     ui->graphicsView->setScene(scene);
     //blablabla aca se intera con la entrada
 
-    Numeric test(50,20);
-    qDebug() << "El numeric de prueba" << test.toString();
 
-    Vertex* vertex = new Vertex(Numeric(100), Numeric(50));
-    qDebug() << "vertex x es:" << vertex->getX().toString();
-    polygon->addVertex(vertex);
+    long inputX, inputY=0;
+    bool godisbymyside = true;
+    while(1){
+        cout << "Nuevo vertice. Numero negativo para terminar\n";
+        cout << "Coordenada X del vertice: ";
+        cin >> inputX;
+        if(inputX < 0){
+            break;
+        }
+        cout << "Coordenada Y del vertice: ";
+        cin >> inputY;
+        if(inputY < 0){
+            break;
+        }
+        Numeric x(inputX); Numeric y(inputY);
+        Vertex* vertex = new Vertex(x, y);
+        polygon->addVertex(vertex);
+    }
 
+
+//    long a = 20;
+//    long b = 50;
+//    Numeric test(a,b);
+//    qDebug() << "El numeric de prueba" << test.toString();
+
+
+//    qDebug() << "vertex x es:" << vertex->getX().toString();
+
+//    polygon->addVertex(vertex);
+//    polygon->addVertex(vertex);
+//    qDebug() << polygon->getVerticesNumber();
+//    qDebug() << polygon->getVertices()->at(0)->getX().toString();
 //    polygon->addVertex(Vertex(Numeric(300),Numeric(120)));
 //    polygon->addVertex(Vertex(Numeric(320),Numeric(250)));
 //    polygon->addVertex(Vertex(Numeric(150),Numeric(330)));
