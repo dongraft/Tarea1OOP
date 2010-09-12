@@ -7,7 +7,7 @@ Vertex::Vertex(){
 }
 
 Vertex::Vertex(Numeric x, Numeric y){
-    qDebug() << "Agregando los numerics";
+    qDebug() << "Agregando los numerics" << x.toString();
     assert(x.getDen() != 0);
     assert(y.getDen() != 0);
     this->x = x;

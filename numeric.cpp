@@ -5,7 +5,6 @@
 #include "utils.h"
 
 Numeric::Numeric(){
-    assert(true);
     Numeric(0,1);
 }
 
@@ -33,6 +32,8 @@ Numeric::Numeric(long num, long den){
         this->num = num/gcd;
         this->den = den/gcd;
     }
+    this->num = num;
+    this->den = den;
 }
 
 Numeric Numeric::operator+(const Numeric & n){

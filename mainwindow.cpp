@@ -11,8 +11,9 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     //blablabla aca se intera con la entrada
 
     Vertex* vertex = new Vertex(Numeric(100), Numeric(50));
+    qDebug() << "vertex x es:" << vertex->getX().toString();
     polygon->addVertex(vertex);
-    qDebug() << vertex->getX().toString();
+
 //    polygon->addVertex(Vertex(Numeric(300),Numeric(120)));
 //    polygon->addVertex(Vertex(Numeric(320),Numeric(250)));
 //    polygon->addVertex(Vertex(Numeric(150),Numeric(330)));
