@@ -5,7 +5,7 @@
 
 Numeric::Numeric(){
     assert(true);
-    Numeric(0,0);
+    Numeric(0,1);
 }
 
 Numeric::Numeric(int n){
@@ -28,6 +28,11 @@ Numeric::Numeric(long num, long den){
     //den mayor a 0, obvio
     qDebug() << "num/den:" << num <<"/" <<den;
     assert(den!=0);
+    if(num==0){
+        this->num = 0;
+        this->den = 1;
+        return;
+    }
     long numTmp = num;
     long denTmp = den;
     //eclides para maximo comun divisor, mcd o gcd
