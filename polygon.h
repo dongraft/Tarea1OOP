@@ -23,13 +23,13 @@ public:
     int getVerticesNumber();
     Numeric getArea();
     Numeric getPerimeter();
-    vector<Vertex> getVertices();
+    vector<Vertex*> getVertices();
 //    void setOut(vector<Vertex>);
 
 private:
 //    vector<Vertex> out;
-    //Vertex *out;
-    vector<Vertex> *vertices;
+//    Vertex *out;
+    vector<Vertex*> *vertices;
     //Vertex* vertices;
 
 };

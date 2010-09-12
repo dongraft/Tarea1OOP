@@ -17,15 +17,15 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
 //    polygon->addVertex(Vertex(Numeric(50),Numeric(200)));
 
     unsigned int count = polygon->getVerticesNumber();
-    vector<Vertex> vertices = polygon->getVertices();
+   // vector<Vertex*> vertices = polygon->getVertices();
 
-    for(unsigned int i = 0; i<count-1; i++){
-        Vertex a = vertices.at(i);
-        qDebug() << "Esto es i" << i<< "Vertice en X: " << a.getX().getPx();
+//    for(unsigned int i = 0; i<count-1; i++){
+  //      Vertex a = vertices.at(i);
+    //    qDebug() << "Esto es i" << i<< "Vertice en X: " << a.getX().getPx();
 
         //Vertex b = vertices.at(i+1);
        // scene->addLine(a.getX().getPx(),a.getY().getPx(),b.getX().getPx(),b.getY().getPx());
-    }
+   // }
 
 
  //   scene->addEllipse(100,100,50,50);
