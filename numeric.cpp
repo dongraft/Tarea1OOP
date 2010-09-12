@@ -28,12 +28,8 @@ Numeric::Numeric(long num, long den){
     assert(den!=0);
     qDebug() << "num/den:" << num <<"/" <<den;
     long gcd = UTILS_H::gcd(num,den);
-    if(gcd!=1){
-        this->num = num/gcd;
-        this->den = den/gcd;
-    }
-    this->num = num;
-    this->den = den;
+    this->num = num/gcd;
+    this->den = den/gcd;
 }
 
 Numeric Numeric::operator+(const Numeric & n){

@@ -10,6 +10,9 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     ui->graphicsView->setScene(scene);
     //blablabla aca se intera con la entrada
 
+    Numeric test(50,20);
+    qDebug() << "El numeric de prueba" << test.toString();
+
     Vertex* vertex = new Vertex(Numeric(100), Numeric(50));
     qDebug() << "vertex x es:" << vertex->getX().toString();
     polygon->addVertex(vertex);
