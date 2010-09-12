@@ -2,6 +2,7 @@
 #include <assert.h>
 #include <QDebug>
 #include <math.h>
+#include "utils.h"
 
 Numeric::Numeric(){
     assert(true);
@@ -25,25 +26,13 @@ Numeric::Numeric(long n){
 }
 
 Numeric::Numeric(long num, long den){
-    //den mayor a 0, obvio
-    qDebug() << "num/den:" << num <<"/" <<den;
     assert(den!=0);
-    if(num==0){
-        this->num = 0;
-        this->den = 1;
-        return;
+    qDebug() << "num/den:" << num <<"/" <<den;
+    long gcd = UTILS_H::gcd(num,den);
+    if(gcd!=1){
+        this->num = num/gcd;
+        this->den = den/gcd;
     }
-    long numTmp = num;
-    long denTmp = den;
-    //eclides para maximo comun divisor, mcd o gcd
-    while(numTmp != denTmp){
-        if(numTmp > denTmp)
-            numTmp -= denTmp;
-        else
-            denTmp -= numTmp;
-    }
-    this->num = num/numTmp;
-    this->den = den/numTmp;
 }
 
 Numeric Numeric::operator+(const Numeric & n){

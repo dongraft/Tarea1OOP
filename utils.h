@@ -3,5 +3,6 @@
 #include "numeric.h"
 
 Numeric sqrt(Numeric n);
+long gcd(long, long);
 
 #endif // UTILS_H
