@@ -13,14 +13,14 @@
 
 class Vertex {
 private:
-    Numeric *x, *y;
+    Numeric x, y;
 public:
     Vertex();
-    Vertex(Numeric*,Numeric*);
-    Numeric* getX();
-    Numeric* getY();
-    void setX(Numeric*);
-    void setY(Numeric*);
+    Vertex(Numeric,Numeric);
+    Numeric getX();
+    Numeric getY();
+    void setX(Numeric);
+    void setY(Numeric);
 };
 
 #endif	/* VERTEX_H */
