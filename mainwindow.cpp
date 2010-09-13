@@ -33,9 +33,10 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
         polygon->addVertex(vertex);
         cout << "\n";
     }
-    assert(polygon->getArea().getNum()>0);
+    Numeric area = polygon->getArea();
+    assert(area.getNum()>0);
     QList<Vertex*>* vertices = polygon->getVertices();
-    qDebug() << polygon->getPerimeter().toString();
+
     for(int i = 0; i<vertices->size()-1; i++){
         Vertex* a = vertices->at(i);
         Vertex* b = vertices->at(i+1);
@@ -45,8 +46,8 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     Vertex* b = vertices->at(0);
     scene->addLine(a->getX().getPx(),a->getY().getPx(),b->getX().getPx(),b->getY().getPx());
 
- //   scene->addEllipse(100,100,50,50);
-//    scene->addEllipse(0,100,100,20);
+    qDebug() << "Area del poligono: " << area.toString();
+    qDebug() << "Perimetro del poligono: " << polygon->getPerimeter().toString();
 
     connect(ui->graphicsView, SIGNAL(resized(int,int)), scene, SLOT(setNewSize(int, int)));
 }
