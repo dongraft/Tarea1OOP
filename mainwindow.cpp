@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include <iostream>
 #include <QDebug>
+#include <assert.h>
 using namespace std;
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow){
@@ -32,9 +33,9 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
         polygon->addVertex(vertex);
         cout << "\n";
     }
-
+    assert(polygon->getArea().getNum()>0);
     QList<Vertex*>* vertices = polygon->getVertices();
-    qDebug() << polygon->getArea().toString();
+    qDebug() << polygon->getPerimeter().toString();
     for(int i = 0; i<vertices->size()-1; i++){
         Vertex* a = vertices->at(i);
         Vertex* b = vertices->at(i+1);
