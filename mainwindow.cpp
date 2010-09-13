@@ -14,18 +14,18 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     long inputX, inputY=0;
     bool godisbymyside = true;
     while(godisbymyside){
-        cout << "El poligono tiene " << polygon->getVerticesNumber() << " vertices\n";
-        cout << "Nuevo vertice. Numero negativo para terminar\n";
+        qDebug() << "El poligono tiene " << polygon->getVerticesNumber() << " vertices";
+        qDebug() << "Nuevo vertice. Numero negativo para terminar";
         cout << "Coordenada X del vertice: ";
         cin >> inputX;
         if(inputX < 0){
-            cout << "Su poligono a modo de produccion ha pasado";
+            qDebug() << "Su poligono a modo de produccion ha pasado";
             break;
         }
         cout << "Coordenada Y del vertice: ";
         cin >> inputY;
         if(inputY < 0){
-            cout << "Su poligono a modo de produccion ha pasado";
+            qDebug() << "Su poligono a modo de produccion ha pasado";
             break;
         }
         Numeric x(inputX,1); Numeric y(inputY,1);

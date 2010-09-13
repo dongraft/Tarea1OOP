@@ -7,7 +7,7 @@
 //Vertex* out;
 //Vertex* vertices;
 Polygon::Polygon(){
-    assert(true);
+    interception = false;
     vertices = new QList<Vertex*>();
 }
 
@@ -27,6 +27,7 @@ int Polygon::getVerticesNumber(){
 
 Numeric Polygon::getArea(){
     assert(vertices->size()>2);
+    assert(!interception);
 
     Vertex *v_i,*v_i1;
     Numeric area(0,1);

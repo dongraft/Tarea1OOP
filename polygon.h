@@ -23,6 +23,7 @@ private:
 //    vector<Vertex> out;
 //    Vertex *out;
     QList<Vertex*> *vertices;
+    bool interception;
     //Vertex* vertices;
 
 };
